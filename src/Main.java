@@ -18,14 +18,24 @@ public class Main {
         binaryTree.InsertIntoTree(root,7);
 
 
-        binaryTree.Inorder(root);
-        System.out.println("..............................");
+//        binaryTree.Inorder(root);
+//        System.out.println("..............................");
+//
+//        System.out.println(binaryTree.MaximumValueRecursive(root));
+//        System.out.println(binaryTree.MaximumValueNoRecursive(root));
+//
+//        System.out.println(binaryTree.searchingRecursive(root,6));
+//        System.out.println(binaryTree.searchNoRecursive(root,7));
+//
+//        System.out.println("...................");
+//        System.out.println(binaryTree.sizeOfTree(root));
+//
+//        System.out.println(binaryTree.sizeOfTreeRecur(root));
+//
+//        binaryTree.printLeveOrder(root);
 
-        System.out.println(binaryTree.MaximumValueRecursive(root));
-        System.out.println(binaryTree.MaximumValueNoRecursive(root));
+        System.out.println(binaryTree.HeightOfANode(root));
 
-        System.out.println(binaryTree.searchingRecursive(root,6));
-        System.out.println(binaryTree.searchNoRecursive(root,7));
     }
 
 }
