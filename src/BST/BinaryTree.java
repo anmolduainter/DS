@@ -278,22 +278,58 @@ public class BinaryTree {
 
     public int HeightOfANode(BinaryTreeNode root){
 
-        int heightCount=-1;
-
-        if (root!=null){
-
-            int leftCount=HeightOfANode(root.getLeft());
-            int rightCount=HeightOfANode(root.getRight());
-
-            if (leftCount>=rightCount){
-                heightCount=leftCount;
-            }
-            else {
-                heightCount=rightCount;
-            }
+        if (root==null){
+            return 0;
         }
 
-        return heightCount;
+        int leftCount=HeightOfANode(root.left);
+        int rightCount=HeightOfANode(root.right);
+        return (leftCount>rightCount)?leftCount+1:rightCount+1;
+
+    }
+
+
+    //Problem 4:= Height of a node without recursion
+
+    public int HeightWithouRecur(BinaryTreeNode root){
+
+        int count=1;
+        int count1=1;
+        if (root!=null){
+
+            Queue<BinaryTreeNode> q=new LinkedList<BinaryTreeNode>();
+
+            q.offer(root);
+            q.offer(null);
+            while(!q.isEmpty()){
+
+                BinaryTreeNode temp=q.poll();
+
+                if (temp!=null){
+                    if (temp.left==null && temp.right==null){
+                        count1=count;
+                    }
+                    if (temp.getLeft()!=null){
+                        q.offer(temp.getLeft());
+                    }
+                    if (temp.getRight()!=null){
+                        q.offer(temp.getRight());
+                    }
+
+                }
+                else {
+                    if (!q.isEmpty()){
+                        count++;
+                        q.offer(null);
+
+                    }
+                }
+
+            }
+
+        }
+
+        return count1;
     }
 
 }

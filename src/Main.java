@@ -15,7 +15,7 @@ public class Main {
         binaryTree.InsertIntoTree(root,4);
         binaryTree.InsertIntoTree(root,5);
         binaryTree.InsertIntoTree(root,6);
-        binaryTree.InsertIntoTree(root,7);
+     //   binaryTree.InsertIntoTree(root,7);
 
 
 //        binaryTree.Inorder(root);
@@ -35,6 +35,7 @@ public class Main {
 //        binaryTree.printLeveOrder(root);
 
         System.out.println(binaryTree.HeightOfANode(root));
+        System.out.println(binaryTree.HeightWithouRecur(root));
 
     }
 
