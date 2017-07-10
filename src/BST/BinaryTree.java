@@ -332,4 +332,102 @@ public class BinaryTree {
         return count1;
     }
 
+
+    //Problem 5:=rightest deepest Node Finding
+
+
+    public int DeepestNode(BinaryTreeNode root) {
+
+        BinaryTreeNode temp = null;
+
+        if (root != null) {
+
+            Queue<BinaryTreeNode> q = new LinkedList<BinaryTreeNode>();
+            q.offer(root);
+            while (!q.isEmpty()) {
+                temp = q.poll();
+                if (temp.getLeft() != null) {
+                    q.offer(temp.getLeft());
+                }
+                if (temp.getRight() != null) {
+                    q.offer(temp.getRight());
+                }
+            }
+        }
+
+        return temp.getData();
+
+    }
+
+
+    //Problem 6:= Count the no. of full nodes in a binary tree including root
+
+    public int CountFullNodes(BinaryTreeNode root){
+
+        int count=0;
+
+        if (root!=null){
+
+            Queue<BinaryTreeNode> q=new LinkedList<>();
+            q.offer(root);
+            while(!q.isEmpty()){
+
+                BinaryTreeNode temp=q.poll();
+                if (temp.getLeft()!=null && temp.getRight()!=null){
+                    count++;
+                }
+                if (temp.getLeft()!=null){
+                    q.offer(temp.getLeft());
+                }
+                if (temp.getRight()!=null){
+                    q.offer(temp.getRight());
+                }
+
+            }
+
+        }
+
+        return count+1;
+
+    }
+
+    //Problem 7:= Count the no. of half nodes without checking root
+
+
+    public int CountHalfNodes(BinaryTreeNode root){
+
+        int count=0;
+
+        if (root!=null){
+
+            Queue<BinaryTreeNode> q=new LinkedList<>();
+            q.offer(root);
+            while(!q.isEmpty()){
+
+                BinaryTreeNode temp=q.poll();
+                if ((temp.getLeft()==null && temp.getRight()!=null)||
+                        (temp.getLeft()!=null && temp.getRight()==null)){
+                    count++;
+                }
+                if (temp.getLeft()!=null){
+                    q.offer(temp.getLeft());
+                }
+                if (temp.getRight()!=null){
+                    q.offer(temp.getRight());
+                }
+
+            }
+
+        }
+
+        return count;
+
+    }
+
+
+    //Problem 8:=Diameter of a tree(No.of nodes on the longestPath between leafs )
+
+
+
+
 }

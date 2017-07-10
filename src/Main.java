@@ -1,5 +1,6 @@
 import BST.BinaryTree;
 import BST.BinaryTreeNode;
+import com.sun.org.apache.xerces.internal.dom.DeepNodeListImpl;
 
 /**
  * Created by anmol on 8/7/17.
@@ -15,10 +16,10 @@ public class Main {
         binaryTree.InsertIntoTree(root,4);
         binaryTree.InsertIntoTree(root,5);
         binaryTree.InsertIntoTree(root,6);
-     //   binaryTree.InsertIntoTree(root,7);
+        binaryTree.InsertIntoTree(root,7);
 
 
-//        binaryTree.Inorder(root);
+        binaryTree.Inorder(root);
 //        System.out.println("..............................");
 //
 //        System.out.println(binaryTree.MaximumValueRecursive(root));
@@ -34,8 +35,15 @@ public class Main {
 //
 //        binaryTree.printLeveOrder(root);
 
-        System.out.println(binaryTree.HeightOfANode(root));
-        System.out.println(binaryTree.HeightWithouRecur(root));
+//        System.out.println(binaryTree.HeightOfANode(root));
+//        System.out.println(binaryTree.HeightWithouRecur(root));
+//
+//        System.out.println("......................");
+//          System.out.println(binaryTree.DeepestNode(root));
+
+
+        System.out.println("......................");
+        System.out.println(binaryTree.CountFullNodes(root));
 
     }
 
