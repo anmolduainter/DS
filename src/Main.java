@@ -17,6 +17,8 @@ public class Main {
         binaryTree.InsertIntoTree(root,5);
         binaryTree.InsertIntoTree(root,6);
         binaryTree.InsertIntoTree(root,7);
+        binaryTree.InsertIntoTree(root,8);
+        binaryTree.InsertIntoTree(root,9);
 
 
         binaryTree.Inorder(root);
@@ -41,9 +43,40 @@ public class Main {
 //        System.out.println("......................");
 //          System.out.println(binaryTree.DeepestNode(root));
 
+//
+//        System.out.println("......................");
+//        System.out.println(binaryTree.CountFullNodes(root));
 
-        System.out.println("......................");
-        System.out.println(binaryTree.CountFullNodes(root));
+//
+//        System.out.println("......................");
+//        System.out.println(binaryTree.DiameterOfaTree(root));
+
+//
+//        System.out.println("......................");
+//       binaryTree.PrintPaths(root);
+//
+
+//
+//        System.out.println("......................");
+//        System.out.println(binaryTree.CheckPathSum(root,12));
+//
+
+//
+//        System.out.println("......................");
+//        System.out.println(binaryTree.SumOfAllNodes(root));
+
+
+//
+//        System.out.println("......................");
+//        System.out.println(binaryTree.MirrorofTree(root));
+//
+//
+//        System.out.println("......................");
+//        binaryTree.Inorder(root);
+//
+
+
+
 
     }
 

@@ -428,6 +428,105 @@ public class BinaryTree {
     //Problem 8:=Diameter of a tree(No.of nodes on the longestPath between leafs )
 
 
+    public int DiameterOfaTree(BinaryTreeNode root){
+
+        if (root!=null){
+
+            int len1=HeightOfANode(root.getLeft())+HeightOfANode(root.getRight())+1;
+            int len2=Math.max(DiameterOfaTree(root.left),DiameterOfaTree(root.right));
+            return (Math.max(len1,len2));
+        }
+
+        return 0;
+    }
+
+
+    //Problem 9:= Print out all roots to leafs Path.................
+
+    public void PrintPaths(BinaryTreeNode root){
+        int[] paths=new int[256];
+        PrintPaths(root,paths,0);
+    }
+    public void PrintPaths(BinaryTreeNode root,int[] arr,int PathLen){
+
+        if (root!=null){
+            arr[PathLen]=root.getData();
+            PathLen++;
+            if (root.getLeft()==null&&root.getRight()==null){
+                printArray(arr,PathLen);
+            }
+            else{
+
+                PrintPaths(root.getLeft(),arr,PathLen);
+                PrintPaths(root.getRight(),arr,PathLen);
+            }
+        }
+
+    }
+
+    public void printArray(int[] arr,int le){
+
+             for (int i=0;i<le;i++){
+
+                 System.out.println(" "+arr[i]);
+
+        }
+
+    }
+
+
+    //Problem 10:=checking the existence of path with given sum
+
+    public boolean CheckPathSum(BinaryTreeNode root, int sum){
+
+        if (root!=null){
+
+            if (root.getLeft()==null && root.getRight()==null && root.getData()==sum){
+                return true;
+            }
+            else{
+                return (CheckPathSum(root.getLeft(),sum-root.getData())||CheckPathSum(root.getRight(),sum-root.getData()));
+            }
+
+        }
+
+        return false;
+    }
+
+
+    //Problem 11:= Sum of all nodes in a tree
+
+    public int SumOfAllNodes(BinaryTreeNode root){
+
+        if (root!=null){
+
+            return root.getData()+SumOfAllNodes(root.getLeft())+SumOfAllNodes(root.getRight());
+
+        }
+     return 0;
+    }
+
+    //problem 12:=Mirror of a tree
+
+    public BinaryTreeNode MirrorofTree(BinaryTreeNode root){
+        if (root!=null){
+
+            MirrorofTree(root.getLeft());
+            MirrorofTree(root.getRight());
+
+            BinaryTreeNode temp=root.left;
+            root.left=root.right;
+            root.right=temp;
+            System.out.print(root.getData()+ " ");
+        }
+        return root;
+
+    }
+
+
+    //problem 13:=Check wheteher the two trees are mirrors of each other
+
+
 
 
 }
