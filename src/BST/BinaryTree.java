@@ -527,6 +527,20 @@ public class BinaryTree {
     //problem 13:=Check wheteher the two trees are mirrors of each other
 
 
+    public boolean CheckMirrors(BinaryTreeNode root1, BinaryTreeNode root2){
+
+
+            if (root1==null && root2==null){
+                return true;
+            }
+
+            if (root1==null || root2==null){
+                return false;
+            }
+            else return CheckMirrors(root1.getLeft(),root2.getRight()) && CheckMirrors(root1.getRight(),root2.getLeft());
+
+
+    }
 
 
 }
