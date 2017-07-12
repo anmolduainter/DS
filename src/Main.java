@@ -21,7 +21,20 @@ public class Main {
         binaryTree.InsertIntoTree(root,9);
 
 
-        binaryTree.Inorder(root);
+
+        BinaryTreeNode root1=new BinaryTreeNode(2);
+        BinaryTree binaryTree1=new BinaryTree();
+
+        binaryTree1.InsertIntoTree(root1,3);
+        binaryTree1.InsertIntoTree(root1,4);
+        binaryTree1.InsertIntoTree(root1,5);
+        binaryTree1.InsertIntoTree(root1,6);
+        binaryTree1.InsertIntoTree(root1,7);
+        binaryTree1.InsertIntoTree(root1,8);
+        binaryTree1.InsertIntoTree(root1,9);
+
+
+        binaryTree.Inorder(root1);
 //        System.out.println("..............................");
 //
 //        System.out.println(binaryTree.MaximumValueRecursive(root));
@@ -74,6 +87,18 @@ public class Main {
 //        System.out.println("......................");
 //        binaryTree.Inorder(root);
 //
+
+
+ //       System.out.println(binaryTree.CheckMirrors(root,root1));
+//
+//        int a[]=new int[10];
+//        int b[]=new int[10];
+//
+//        binaryTree.buildBT(,);
+//
+
+
+        System.out.println(binaryTree.NoOfBinaryTrees(3));
 
 
 

@@ -538,9 +538,60 @@ public class BinaryTree {
                 return false;
             }
             else return CheckMirrors(root1.getLeft(),root2.getRight()) && CheckMirrors(root1.getRight(),root2.getLeft());
+    }
 
+   //Problem 14:=Construct Binary tree from given inoreder and Post order traversals
+    // Inorder := D B E A F C
+    //PreOrder:= A B D E C F
+
+
+    public BinaryTreeNode ConstructBinaryTree1(int[] inorder,int[] preorder){
+
+        if (preorder.length==0 || preorder.length!=inorder.length){
+            return null;
+        }
+        return buildBT(preorder,0,preorder.length-1,inorder,0,inorder.length-1);
+    }
+
+    public BinaryTreeNode buildBT(int[] preOrder,int preStart,int preEnd,int[] inOrder,int inStart,int inEnd){
+
+        int data=preOrder[preStart];
+        BinaryTreeNode cur=new BinaryTreeNode(data);
+        int offest=inStart;
+        for (;offest<inEnd;offest++){
+            if (inOrder[offest]==data){
+                break;
+            }
+        }
+
+        cur.left=buildBT(preOrder,preStart+1,preStart+offest-inStart,inOrder,inStart,offest-1);
+        cur.right=buildBT(preOrder,preStart+offest-inStart+1,preEnd,inOrder,offest+1,inEnd);
+
+        return cur;
 
     }
+
+
+    //Problem 15:= Count the no. of binary trees give n nodes
+
+    public int NoOfBinaryTrees(int n){
+
+        int[] arr=new int[n+1];
+
+        arr[0]=1;
+        arr[1]=1;
+
+        for (int i=2;i<=n;i++){
+            for (int j=0;j<i;j++){
+                arr[i]+=arr[j]*arr[i-j-1];
+            }
+        }
+
+        return arr[n];
+    }
+
+
+    //Problem 16:= Leafs are denoted by L and
 
 
 }
