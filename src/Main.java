@@ -9,32 +9,32 @@ public class Main {
 
     public static void main(String[] args){
 
-        BinaryTreeNode root=new BinaryTreeNode(2);
-        BinaryTree binaryTree=new BinaryTree();
-
-        binaryTree.InsertIntoTree(root,3);
-        binaryTree.InsertIntoTree(root,4);
-        binaryTree.InsertIntoTree(root,5);
-        binaryTree.InsertIntoTree(root,6);
-        binaryTree.InsertIntoTree(root,7);
-        binaryTree.InsertIntoTree(root,8);
-        binaryTree.InsertIntoTree(root,9);
-
-
-
-        BinaryTreeNode root1=new BinaryTreeNode(2);
-        BinaryTree binaryTree1=new BinaryTree();
-
-        binaryTree1.InsertIntoTree(root1,3);
-        binaryTree1.InsertIntoTree(root1,4);
-        binaryTree1.InsertIntoTree(root1,5);
-        binaryTree1.InsertIntoTree(root1,6);
-        binaryTree1.InsertIntoTree(root1,7);
-        binaryTree1.InsertIntoTree(root1,8);
-        binaryTree1.InsertIntoTree(root1,9);
+//        BinaryTreeNode root=new BinaryTreeNode(2);
+//        BinaryTree binaryTree=new BinaryTree();
+//
+//        binaryTree.InsertIntoTree(root,3);
+//        binaryTree.InsertIntoTree(root,4);
+//        binaryTree.InsertIntoTree(root,5);
+//        binaryTree.InsertIntoTree(root,6);
+//        binaryTree.InsertIntoTree(root,7);
+//        binaryTree.InsertIntoTree(root,8);
+//        binaryTree.InsertIntoTree(root,9);
 
 
-        binaryTree.Inorder(root1);
+
+//        BinaryTreeNode root1=new BinaryTreeNode(2);
+//        BinaryTree binaryTree1=new BinaryTree();
+//
+//        binaryTree1.InsertIntoTree(root1,3);
+//        binaryTree1.InsertIntoTree(root1,4);
+//        binaryTree1.InsertIntoTree(root1,5);
+//        binaryTree1.InsertIntoTree(root1,6);
+//        binaryTree1.InsertIntoTree(root1,7);
+//        binaryTree1.InsertIntoTree(root1,8);
+//        binaryTree1.InsertIntoTree(root1,9);
+//
+//
+//        binaryTree.Inorder(root1);
 //        System.out.println("..............................");
 //
 //        System.out.println(binaryTree.MaximumValueRecursive(root));
@@ -98,8 +98,17 @@ public class Main {
 //
 
 
-        System.out.println(binaryTree.NoOfBinaryTrees(3));
+    //    System.out.println(binaryTree.NoOfBinaryTrees(3));
 
+        BinaryTree binaryTree=new BinaryTree();
+        char[] ch=new char[5];
+        ch[0]='I';
+        ch[1]='L';
+        ch[2]='I';
+        ch[3]='L';
+        ch[4]='L';
+        BinaryTreeNode node=binaryTree.question16(ch,0);
+        binaryTree.printLeveOrder(node);
 
 
 

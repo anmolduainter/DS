@@ -591,7 +591,34 @@ public class BinaryTree {
     }
 
 
-    //Problem 16:= Leafs are denoted by L and
+    //Problem 16:= Leafs are denoted by L and internal nodes denoted by I (0 or 2 children) construct binary tree
+
+    // preorder traversal given : ex :=ILILL
+
+    public BinaryTreeNode question16(char[] A,int i){
+
+        if (A==null){
+            return null;
+        }
+        if (A.length==i){
+            return null;
+        }
+
+         BinaryTreeNode newnode=new BinaryTreeNode();
+         newnode.setData(A[i]);
+         newnode.setLeft(null);
+         newnode.setRight(null);
+
+         if (A[i]=='L'){
+             return newnode;
+         }
+
+         i=i+1;
+         newnode.setLeft(question16(A,i));
+         i=i+1;
+         newnode.setRight(question16(A,i));
+         return newnode;
+    }
 
 
 }
