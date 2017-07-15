@@ -30,9 +30,26 @@ public class ThreadedTrees {
     public void InsertLeftInorder(ThreadedBinaryTreeNode P, ThreadedBinaryTreeNode Q){
 
         ThreadedBinaryTreeNode temp;
+        Q.setLeft(P.getLeft());
+        Q.setLTag(P.getLTag());
+        Q.setRTag(0);
+        Q.setRight(P);
+        P.setLeft(Q);
+        P.setLTag(1);
+
+        if (Q.getLTag()==1){
+            temp=Q.getLeft();
+            while(temp.getRTag()==1){
+                temp=temp.getRight();
+            }
+            temp.setRight(Q);
+        }
 
 
     }
+
+
+
 
 
 
