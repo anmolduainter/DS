@@ -1,5 +1,7 @@
 package ThreadedBinaryTrees;
 
+import javafx.geometry.Pos;
+
 /**
  * Created by anmol on 15/7/17.
  */
@@ -45,6 +47,25 @@ public class ThreadedTrees {
             temp.setRight(Q);
         }
 
+
+    }
+
+
+
+    public ThreadedBinaryTreeNode InorderSuccessor(ThreadedBinaryTreeNode P){
+
+        ThreadedBinaryTreeNode Position;
+        if (P.RTag==0){
+            return P.getRight();
+        }
+
+        else{
+            Position=P.getRight();
+            while(Position.getLTag()==1){
+                Position=Position.getLeft();
+            }
+            return Position;
+        }
 
     }
 

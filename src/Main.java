@@ -1,5 +1,6 @@
 import BST.BinaryTree;
 import BST.BinaryTreeNode;
+import ExpressionTrees.ExpressionTrees;
 import com.sun.org.apache.xerces.internal.dom.DeepNodeListImpl;
 
 /**
@@ -100,17 +101,26 @@ public class Main {
 
     //    System.out.println(binaryTree.NoOfBinaryTrees(3));
 
-        BinaryTree binaryTree=new BinaryTree();
-        char[] ch=new char[5];
-        ch[0]='I';
-        ch[1]='L';
-        ch[2]='I';
-        ch[3]='L';
-        ch[4]='L';
-        BinaryTreeNode node=binaryTree.question16(ch,0);
-        binaryTree.printLeveOrder(node);
+//        BinaryTree binaryTree=new BinaryTree();
+//        char[] ch=new char[5];
+//        ch[0]='I';
+//        ch[1]='L';
+//        ch[2]='I';
+//        ch[3]='L';
+//        ch[4]='L';
+//        BinaryTreeNode node=binaryTree.question16(ch,0);
+//        binaryTree.printLeveOrder(node);
+//
 
 
+        ExpressionTrees expressionTrees=new ExpressionTrees();
+        char[] a=new char[5];
+        a[0]='A';
+        a[1]='B';
+        a[2]='C';
+        a[3]='*';
+        a[4]='-';
+        expressionTrees.Inorder(expressionTrees.Expression(a,5));
 
     }
 
