@@ -1,4 +1,4 @@
-package BST;
+package BinaryTree;
 
 /**
  * Created by anmol on 8/7/17.

@@ -1,4 +1,4 @@
-package BST;
+package BinaryTree;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -10,7 +10,7 @@ import java.util.Stack;
 public class BinaryTree {
 
 
-    public void InsertIntoTree(BinaryTreeNode root,int data){
+    public void InsertIntoTree(BinaryTreeNode root, int data){
 
         if (root==null){
             return;
