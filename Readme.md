@@ -29,3 +29,4 @@
  ### Graphs
  
  - Adjacency Matrix
+ - Adjacency List
