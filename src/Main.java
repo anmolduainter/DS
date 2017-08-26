@@ -1,23 +1,23 @@
 
+import BinaryTree.BinaryTreeNode;
+import BinaryTree.BinaryTree;
 import ExpressionTrees.ExpressionTrees;
 
-/**
- * Created by anmol on 8/7/17.
- */
+
 public class Main {
 
     public static void main(String[] args){
 
-//        BinaryTreeNode root=new BinaryTreeNode(2);
-//        BinaryTree binaryTree=new BinaryTree();
-//
-//        binaryTree.InsertIntoTree(root,3);
-//        binaryTree.InsertIntoTree(root,4);
-//        binaryTree.InsertIntoTree(root,5);
-//        binaryTree.InsertIntoTree(root,6);
-//        binaryTree.InsertIntoTree(root,7);
-//        binaryTree.InsertIntoTree(root,8);
-//        binaryTree.InsertIntoTree(root,9);
+        BinaryTreeNode root=new BinaryTreeNode(2);
+        BinaryTree binaryTree=new BinaryTree();
+
+        binaryTree.InsertIntoTree(root,3);
+        binaryTree.InsertIntoTree(root,4);
+        binaryTree.InsertIntoTree(root,5);
+        binaryTree.InsertIntoTree(root,6);
+        binaryTree.InsertIntoTree(root,7);
+        binaryTree.InsertIntoTree(root,8);
+        binaryTree.InsertIntoTree(root,9);
 
 
 
@@ -33,7 +33,7 @@ public class Main {
 //        binaryTree1.InsertIntoTree(root1,9);
 //
 //
-//        binaryTree.Inorder(root1);
+        binaryTree.Inorder(root);
 //        System.out.println("..............................");
 //
 //        System.out.println(binaryTree.MaximumValueRecursive(root));
@@ -47,17 +47,18 @@ public class Main {
 //
 //        System.out.println(binaryTree.sizeOfTreeRecur(root));
 //
-//        binaryTree.printLeveOrder(root);
+
+        binaryTree.printLeveOrderReverese(root);
 
 //        System.out.println(binaryTree.HeightOfANode(root));
 //        System.out.println(binaryTree.HeightWithouRecur(root));
 //
-//        System.out.println("......................");
-//          System.out.println(binaryTree.DeepestNode(root));
+       System.out.println("......................");
+          System.out.println(binaryTree.DeepestNode(root));
 
 //
-//        System.out.println("......................");
-//        System.out.println(binaryTree.CountFullNodes(root));
+        System.out.println("......................");
+        System.out.println(binaryTree.CountFullNodes(root));
 
 //
 //        System.out.println("......................");

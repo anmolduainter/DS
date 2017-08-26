@@ -360,7 +360,7 @@ public class BinaryTree {
     }
 
 
-    //Problem 6:= Count the no. of full nodes in a binary tree including root
+    //Problem 6:= Count the no. of full nodes in a binary tree
 
     public int CountFullNodes(BinaryTreeNode root){
 
@@ -387,11 +387,11 @@ public class BinaryTree {
 
         }
 
-        return count+1;
+        return count;
 
     }
 
-    //Problem 7:= Count the no. of half nodes without checking root
+    //Problem 7:= Count the no. of half nodes
 
 
     public int CountHalfNodes(BinaryTreeNode root){
