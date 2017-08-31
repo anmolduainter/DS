@@ -31,3 +31,4 @@
  - Adjacency Matrix
  - Adjacency List
  - DFS(Depth First Search)
+ - BFS(Breadth First Search)
