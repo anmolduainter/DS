@@ -32,3 +32,25 @@
  - Adjacency List
  - DFS(Depth First Search)
  - BFS(Breadth First Search)
+ 
+ ### Arrays
+ 
+ - ArrayRotation
+ - JugglingAlgorithm
+ - ReversalAlgorithm
+ 
+ ### LinkedList
+ 
+ - Detecting And Removing Loop
+ - Detecting Loop
+ - Finding Middle Element
+ - Flattening List
+ - Identical Linked List
+ - Intersection Of Two Linked List
+ - K Reverse
+ - Merge Two Sorted Linked List
+ - Palinderome
+ - Remove Duplicates Sorted List
+ - Reverse Linked List
+ 
+ 

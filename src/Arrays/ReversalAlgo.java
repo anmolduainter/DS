@@ -9,6 +9,11 @@ public class ReversalAlgo {
 
         int n=arr.length;
 
+        Reverse(arr,0,d-1);
+
+        Reverse(arr,d,n-1);
+
+        Reverse(arr,0,n-1);
 
 
     }
@@ -41,6 +46,10 @@ public class ReversalAlgo {
     }
 
     public static void main(String[] args){
+
+        int arr[] = {1, 2, 3, 4, 5, 6, 7};
+        LftRotate(arr, 2); // Rotate array by 2
+        PrintArray(arr);
 
     }
 
